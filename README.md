@@ -1,2 +1,19 @@
 # student-study-planner
-student-study-planner project 1
+
+A web application to help students organise assignments, timetbales, notes and study goals.
+
+## Features 
+- Dashboard 
+- Tracker for Assignments 
+- Timetable 
+- Calendar 
+- Study Notes 
+- Goal Tracking 
+
+## Languages 
+- HTML 
+- CSS
+- JavaScript 
+
+## By Eva Drummond
+

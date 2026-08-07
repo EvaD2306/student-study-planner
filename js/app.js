@@ -1,0 +1,1 @@
+console.log("Student Study Planner loaded!");

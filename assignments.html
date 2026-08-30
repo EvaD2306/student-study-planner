@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignments | Student Study Planner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h1>Study Planner</h1>
+
+            <nav>
+                <a href="index.html">🏠 Dashboard</a>
+                <a href="assignments.html" class="active">📝 Assignments</a>
+                <a href="#">📅 Timetable</a>
+                <a href="#">📆 Calendar</a>
+                <a href="#">📚 Notes</a>
+                <a href="#">🎯 Goals</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="header">
+
+                <div>
+                    <h2>Assignments 📝</h2>
+                    <p>Keep track of your upcoming coursework and deadlines.</p>
+                </div>
+
+
+            </header>
+
+            <!-- Assignment summary -->
+            <section class="dashboard-grid">
+
+                <div class="card">
+                    <h3>📚 Total</h3>
+                    <p class="number">0</p>
+                    <p>Total assignments</p>
+                </div>
+
+                <div class="card">
+                    <h3>⏰ Upcoming</h3>
+                    <p class="number">0</p>
+                    <p>Due soon</p>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Completed</h3>
+                    <p class="number">0</p>
+                    <p>Completed assignments</p>
+                </div>
+
+            </section>
+
+            <!-- Assignments list -->
+            <section class="welcome">
+
+                <h2>Your Assignments</h2>
+
+                <p>
+                    You don't have any assignments yet.
+                    Click <strong>+ Add Assignment</strong> to get started.
+                </p>
+
+            </section>
+
+<section class="assignment-section">
+    <h2>Add Assignment</h2>
+
+    <form id="assignmentForm">
+        <input type="text" id="assignmentName" placeholder="Assignment name" required>
+
+        <input type="text" id="assignmentModule" placeholder="Module" required>
+
+        <input type="date" id="assignmentDate" required>
+
+        <select id="assignmentPriority" required>
+            <option value="">Select priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <button type="submit">Add Assignment</button>
+    </form>
+</section>
+
+<section class="assignment-section">
+    <h2>My Assignments</h2>
+
+    <div id="assignmentList"></div>
+</section>
+
+
+        </main>
+
+    </div>
+
+<script src="js/assignments.js"></script>
+
+</body>
+
+</html>

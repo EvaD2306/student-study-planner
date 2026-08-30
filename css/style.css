@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f7fa;
-    color: #1f2937;
+    background-color: #fff5fb;
+    color: #3b2447;
 }
 
 .app {
@@ -16,18 +16,22 @@ body {
 }
 
 
-/* Sidebar */
+/* =========================
+   Sidebar
+   ========================= */
 
 .sidebar {
     width: 240px;
-    background-color: #172554;
+    background: linear-gradient(180deg, #6d3b82, #8e5aa8);
     color: white;
     padding: 30px 20px;
+    box-shadow: 4px 0 15px rgba(126, 76, 153, 0.15);
 }
 
 .sidebar h1 {
     font-size: 22px;
     margin-bottom: 40px;
+    letter-spacing: 0.5px;
 }
 
 .sidebar nav {
@@ -40,16 +44,21 @@ body {
     color: white;
     text-decoration: none;
     padding: 12px 15px;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
 }
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    background-color: #2563eb;
+    background-color: #f29ac2;
+    color: white;
+    transform: translateX(3px);
 }
 
 
-/* Main content */
+/* =========================
+   Main content
+   ========================= */
 
 .main-content {
     flex: 1;
@@ -57,7 +66,9 @@ body {
 }
 
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 
 .header {
     display: flex;
@@ -69,18 +80,23 @@ body {
 .header h2 {
     font-size: 28px;
     margin-bottom: 8px;
+    color: #54245f;
 }
 
 .header p {
-    color: #6b7280;
+    color: #8b718f;
 }
 
 .date {
     text-align: right;
+    color: #7b4b88;
+    font-weight: 600;
 }
 
 
-/* Dashboard cards */
+/* =========================
+   Dashboard cards
+   ========================= */
 
 .dashboard-grid {
     display: grid;
@@ -91,40 +107,155 @@ body {
 .card {
     background-color: white;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border: 1px solid #f3d9ea;
+    box-shadow: 0 5px 15px rgba(126, 76, 153, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(126, 76, 153, 0.14);
 }
 
 .card h3 {
     font-size: 16px;
     margin-bottom: 20px;
+    color: #76517f;
 }
 
 .card .number {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 8px;
+    color: #c65391;
 }
 
 .card p:last-child {
-    color: #6b7280;
+    color: #9a819e;
 }
 
 
-/* Welcome section */
+/* =========================
+   Welcome section
+   ========================= */
 
 .welcome {
     margin-top: 30px;
-    background-color: white;
+    background: linear-gradient(135deg, #ffffff, #fdf2fa);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 16px;
+    border: 1px solid #f3d9ea;
+    box-shadow: 0 5px 15px rgba(126, 76, 153, 0.08);
 }
 
 .welcome h2 {
     margin-bottom: 10px;
+    color: #6d3b82;
 }
 
 .welcome p {
-    color: #6b7280;
+    color: #8b718f;
     line-height: 1.6;
 }
+
+/* =========================
+   Assignments
+   ========================= */
+
+   .assignment-section {
+    background-color: white; 
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+    border: 1px solid #f3d9ea;
+    box-shadow: 0 5px 15px rgba(126, 76, 153, 0.08);
+}
+
+.assignment-section h2 {
+    color: #6d3b82;
+    margin-bottom: 20px;
+}
+
+
+/* Assignment form */
+
+#assignmentForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#assignmentForm input,
+#assignmentForm select {
+    padding: 12px 14px;
+    border: 1px solid #e8c9df;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #4b3454;
+    background-color: #fffafd;
+    outline: none;
+}
+
+#assignmentForm input:focus,
+#assignmentForm select:focus {
+    border-color: #c65391;
+    box-shadow: 0 0 0 3px rgba(198, 83, 145, 0.1);
+}
+
+#assignmentForm input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+}
+
+
+/* Add assignment button */
+
+#assignmentForm button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #c65391, #8e5aa8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#assignmentForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(142, 90, 168, 0.25);
+}
+
+
+/* Assignment cards */
+
+.assignment-card {
+    background: linear-gradient(135deg, #fffafd, #fdf2fa);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    border-left: 5px solid #c65391;
+    border-top: 1px solid #f3d9ea;
+    border-right: 1px solid #f3d9ea;
+    border-bottom: 1px solid #f3d9ea;
+    box-shadow: 0 3px 10px rgba(126, 76, 153, 0.06);
+}
+
+.assignment-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #6d3b82;
+}
+
+.assignment-card p {
+    margin: 6px 0;
+    color: #8b718f;
+}
+
+.assignment-card strong {
+    color: #6d3b82;
+}
+
+
+   

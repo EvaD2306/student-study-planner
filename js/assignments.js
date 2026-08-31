@@ -1,6 +1,10 @@
 const assignmentForm = document.getElementById("assignmentForm");
 const assignmentList = document.getElementById("assignmentList");
 
+const totalAssignments = document.getElementById("totalAssignments");
+const upcomingAssignments = document.getElementById("upcomingAssignments");
+const completedAssignments = document.getElementById("completedAssignments");
+
 assignmentForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -27,6 +31,8 @@ assignmentForm.addEventListener("submit", function(event) {
     `;
 
     assignmentList.appendChild(assignment);
+    totalAssignments.textContent = assignmentList.children.length;
+    
 
     assignmentForm.reset();
 

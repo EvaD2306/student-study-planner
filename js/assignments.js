@@ -38,10 +38,16 @@ assignmentForm.addEventListener("submit", function(event) {
 
     //Complete 
 
-    const completeButton = assignement.querySelector(".complete-button");
+    const completeButton = assignment.querySelector(".complete-button");
 
     completeButton.addEventListener("click", function() {
         assignment.classList.toggle("completed");
+
+        if(assignment.classList.contains("completed")) {
+            completedAssignments.textContent++;
+        } else {
+            completedAssignments.textContent--;
+        } //so counter doesnt go 0 -> 1 -> 2
 
     });
 
@@ -50,6 +56,6 @@ assignmentForm.addEventListener("submit", function(event) {
     const deleteButton = assignment.querySelector(".delete-button");
 
     deleteButton.addEventListener("click", function(){
-        assignement.remove();
+        assignment.remove();
     });
 });

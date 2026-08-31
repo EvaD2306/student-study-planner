@@ -14,6 +14,7 @@ assignmentForm.addEventListener("submit", function(event) {
     const priority = document.getElementById("assignmentPriority").value;
 
     const assignment = document.createElement("div");
+    assignment.dataset.dueDate = date;
 
     assignment.classList.add("assignment-card");
 
@@ -32,7 +33,7 @@ assignmentForm.addEventListener("submit", function(event) {
 
     assignmentList.appendChild(assignment);
     totalAssignments.textContent = assignmentList.children.length;
-    
+    updateUpcomingAssignments();
 
     assignmentForm.reset();
 
@@ -47,7 +48,7 @@ assignmentForm.addEventListener("submit", function(event) {
             completedAssignments.textContent++;
         } else {
             completedAssignments.textContent--;
-        } //so counter doesnt go 0 -> 1 -> 2
+        } //so counter doesnt go 0 -> 1 -> 2, also lets you remove if you click complete again
 
     });
 
@@ -59,3 +60,23 @@ assignmentForm.addEventListener("submit", function(event) {
         assignment.remove();
     });
 });
+
+    function updateUpcomingAssignments() {
+        let upcomingCount = 0;
+        const assignments = assignmentList.children;
+
+        for (let assignment of assignments) {
+            const dueDate = new Date(assignment.dataset.dueDate);
+            const today = new Date();
+            const difference = dueDate - today;
+            const daysUntilDue = difference / (1000 * 60 * 60 * 24);
+         if (daysUntilDue >= 0 && daysUntilDue <=7) {
+            upcomingCount++;
+        }
+        
+        }
+       upcomingAssignments.textContent = upcomingCount;
+    }
+
+    updateUpcomingAssignments();
+
